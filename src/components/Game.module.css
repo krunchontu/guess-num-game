@@ -1,0 +1,36 @@
+/* Styling for the Game component */
+.container {
+  max-width: 500px;
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Align text in the center */
+  background: #f9f9f9; /* Light background for a clean look */
+  padding: 20px; /* Space inside the container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.message {
+  font-size: 18px; /* Message font size */
+  margin-bottom: 10px; /* Space below the message */
+  color: #333; /* Dark gray color for readability */
+}
+
+.resetButton {
+  margin-top: 15px; /* Space above the button */
+  padding: 10px 20px; /* Button padding */
+  background: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.resetButton:hover {
+  background: #0056b3; /* Darker blue on hover */
+}
+
+.tries {
+  margin-top: 10px; /* Space above the tries */
+  font-size: 16px; /* Font size for remaining tries */
+  color: #555; /* Medium gray for tries */
+}

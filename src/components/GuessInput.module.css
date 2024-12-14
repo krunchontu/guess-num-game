@@ -1,0 +1,28 @@
+/* Styling for the GuessInput component */
+.form {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center align items */
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 15px; /* Space below the form */
+  }
+  
+  .input {
+    padding: 10px; /* Space inside input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    flex: 1; /* Allow input to grow */
+  }
+  
+  .button {
+    padding: 10px 15px; /* Space inside button */
+    background: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .button:hover {
+    background: #218838; /* Darker green on hover */
+  }
+  

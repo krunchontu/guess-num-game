@@ -1,0 +1,18 @@
+/* Styling for the PastGuesses component */
+.container {
+    margin-top: 20px; /* Space above the container */
+    text-align: center; /* Center align text */
+  }
+  
+  .list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .item {
+    margin: 5px 0; /* Space between list items */
+    padding: 5px; /* Space inside items */
+    background: #f1f1f1; /* Light gray background */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
