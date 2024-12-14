@@ -1,75 +1,146 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Guess Number Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and interactive React-based game where users try to guess a randomly generated number between 1 and 20. The app provides feedback on each guess (too high, too low, or correct) and tracks the user's past guesses. Users have a maximum of 5 attempts to guess the correct number.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Random Number Generation**: A new random number is generated each time the game starts or resets.
+- **Feedback on Guesses**: Users receive feedback if their guess is too high, too low, or correct.
+- **Limited Attempts**: Users have a maximum of 5 attempts to guess the correct number.
+- **Past Guesses Display**: A list of the user's past guesses is displayed.
+- **Game Reset**: Users can reset the game at any time to start fresh.
+- **Responsive Design**: The app is fully responsive and works on various screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: A JavaScript library for building the user interface.
+- **CSS Modules**: For component-specific styling with no global CSS conflicts.
+- **HTML5 & JavaScript (ES6+)**: Core web technologies for interactive features.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+guess-num-game/
+├── src/
+│   ├── App.js                  # Main app component
+│   ├── components/
+│   │   ├── Game.js             # Game logic and main state management
+│   │   ├── GuessInput.js       # Component for handling user input
+│   │   ├── PastGuesses.js      # Component to display past guesses
+│   │   ├── Game.module.css     # CSS for Game component
+│   │   ├── GuessInput.module.css # CSS for GuessInput component
+│   │   ├── PastGuesses.module.css # CSS for PastGuesses component
+│   ├── index.css               # Global styles
+│   ├── App.js                  # App styles
+├── README.md                   # Project documentation
+├── package.json                # Project dependencies and scripts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## How to Run the App Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Follow these steps to clone and run the project on your local machine:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/guess-num-game.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Navigate to the Project Directory
+```bash
+cd guess-num-game
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Install Dependencies
+Ensure you have **Node.js** and **npm** installed, then run:
+```bash
+npm install
+```
 
-## Learn More
+### 4. Start the Development Server
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app will be accessible at `http://localhost:3000` in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Game Rules
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Objective**: Guess the randomly generated number between 1 and 20.
+2. **Feedback**:
+   - **"Too low"**: Your guess is lower than the target number.
+   - **"Too high"**: Your guess is higher than the target number.
+   - **"Congratulations"**: You guessed correctly.
+3. **Attempts**: You have a maximum of 5 tries to guess the correct number.
+4. **End of Game**:
+   - If you guess the number correctly, the game ends.
+   - If you run out of attempts, the game ends and displays the correct number.
+5. **Reset**: You can reset the game at any time to start over with a new random number.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+You can deploy the app to a hosting platform like **Netlify**, **Vercel**, or **GitHub Pages**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### To Deploy on GitHub Pages:
+1. Install the `gh-pages` package:
+   ```bash
+   npm install gh-pages --save-dev
+   ```
+2. Add the following to your `package.json`:
+   ```json
+   "homepage": "https://<your-username>.github.io/guess-num-game",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
+3. Deploy the app:
+   ```bash
+   npm run deploy
+   ```
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Add difficulty levels (e.g., wider number ranges or fewer attempts).
+- Track the number of games played and user's win/loss statistics.
+- Enhance UI/UX with animations and better styling.
+- Add accessibility features for better usability.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# guess-num-game
-a simple guess the number game
->>>>>>> 935c63b0789f011e750d9f854380a46db3cd0942
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/your-feature-name`).
+3. Commit your changes (`git commit -m "Add some feature"`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Open a pull request.
+
+---
+
+## License
+
+This project is licensed under the [GNU GENERAL PUBLIC LICENSE v3](LICENSE).
+
+---
+
+## Author
+
+**krunchontu**  
+GitHub: [@krunchontu](https://github.com/krunchontu)
+
