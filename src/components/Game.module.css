@@ -10,7 +10,7 @@
 }
 
 .message {
-  font-size: 18px; /* Message font size */
+  font-size: 18px; /* Font size for feedback message */
   margin-bottom: 10px; /* Space below the message */
   color: #333; /* Dark gray color for readability */
 }
@@ -30,7 +30,7 @@
 }
 
 .tries {
-  margin-top: 10px; /* Space above the tries */
-  font-size: 16px; /* Font size for remaining tries */
-  color: #555; /* Medium gray for tries */
+  margin-top: 10px; /* Space above remaining tries text */
+  font-size: 16px; /* Font size for tries */
+  color: #555; /* Medium gray text color */
 }
